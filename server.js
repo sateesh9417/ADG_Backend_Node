@@ -10,7 +10,7 @@ const path = require('path');
 app.use(bodyParser.json());
 app.use(cors());
 
-app.post('/generate-doc', (req, res) => {
+app.post('/generate-doc',cors(), (req, res) => {
     const { html } = req.body;
 
     if (!html) {
