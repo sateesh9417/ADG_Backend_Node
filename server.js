@@ -8,7 +8,11 @@ const ejs = require('ejs');
 const path = require('path');
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(
+    cors({
+      origin: "*",
+    })
+  );
 
 app.post('/generate-doc',cors(), (req, res) => {
     const { html } = req.body;
