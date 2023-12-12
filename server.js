@@ -14,7 +14,7 @@ app.use(
     })
   );
 
-app.post('/generate-doc',cors(), (req, res) => {
+app.post('/generate-doc', (req, res) => {
     res.setHeader('Access-Control-Allow-Credentials', true)
   res.setHeader('Access-Control-Allow-Origin', '*')
   // another common pattern
