@@ -28,7 +28,7 @@ app.post('/generate-doc', async (req, res) => {
         }
 
         // Load EJS template
-        const templatePath = path.join(__dirname, 'template.ejs');
+        const templatePath = path.join('template.ejs');
         const styledHTML = await ejs.renderFile(templatePath, { html });
 
         // Convert HTML to DOCX using html-docx-js
